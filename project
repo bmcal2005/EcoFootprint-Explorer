@@ -1,0 +1,14 @@
+dependencies {
+    def appCenterSdkVersion = '4.4.5'
+    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
+    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
+}
+
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
+
+AppCenter.start(getApplication(), "{Your app secret here}",
+                  Analytics.class, Crashes.class);
+
+"c8f9f874-33b4-409d-95ff-a2f2cc836c8c"
